@@ -80,5 +80,100 @@ public class BasicProject
             }
         }
         Console.WriteLine("Thanks for the Playing");
+        }
+
+        public void RockPaperScissor()
+    {
+        Random random = new Random();
+        String computer;
+        String player;
+
+        bool playAgain = true;
+
+        while (playAgain)
+        {
+            player = "";
+            computer = "";
+            while(player != "ROCK" && player != "PAPER" && player != "SCISSOR")
+            {
+                Console.WriteLine("Enter the ROCK , PAPER , SCISSOR");
+                player = Console.ReadLine();
+                player = player.ToUpper();
+            }
+    
+            switch (random.Next(1 , 4))
+            {
+                case 1 :
+                        computer = "ROCK";
+                        break;
+                case 2 :
+                        computer = "PAPER";
+                        break;
+                case 3 :
+                        computer = "SCISSOR";
+                        break;
+            }
+
+            Console.WriteLine("Computer : " + computer);
+            Console.WriteLine("Player : " + player );
+
+            switch (player)
+            {
+                case "ROCK": 
+                    if(computer == "PAPER")
+                    {
+                        Console.WriteLine("You Lose !!!");    
+                    }
+                    else if(computer == "SCISSOR")
+                    {
+                        Console.WriteLine("You Win !!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You Lose !!!");
+                    }
+                    break;
+                    case "SCISSOR": 
+                    if(computer == "PAPER")
+                    {
+                        Console.WriteLine("You Win !!!");    
+                    }
+                    else if(computer == "SCISSOR")
+                    {
+                        Console.WriteLine("It is draw ");
+                    }
+                    else 
+                    {
+                        Console.WriteLine("You Lose !!!");
+                    }
+                    break;
+                    case "PAPER": 
+                    if(computer == "PAPER")
+                    {
+                        Console.WriteLine("It is draw !!!");    
+                    }
+                    else if(computer == "SCISSOR")
+                    {
+                        Console.WriteLine("You Lose !!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You Win !!!");
+                    }
+                    break;
+            }
+            String onceMore = "";
+            Console.WriteLine("Do you want to play again (Y / N)");
+            onceMore = Console.ReadLine();
+            onceMore = onceMore.ToUpper();
+            if (onceMore == "Y")
+            {
+                playAgain = true;
+            }
+            else
+            {
+                playAgain = false;
+            }
+        }
     }
-    }
+}

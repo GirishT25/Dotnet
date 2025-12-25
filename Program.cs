@@ -21,7 +21,8 @@ class Program
         BasicProject obj = new BasicProject();
         // obj.sayHello(); 
         // obj.Hypotenus();
-        obj.NumberGuesses();
+        // obj.NumberGuesses();
+        obj.RockPaperScissor();
 
         // Vairable var = new Vairable();
         // var.stringMethods();
