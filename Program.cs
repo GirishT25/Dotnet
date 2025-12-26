@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Compression;
 using System.Runtime.InteropServices;
 using MyNamespace;
 
@@ -22,7 +23,7 @@ class Program
         // obj.sayHello(); 
         // obj.Hypotenus();
         // obj.NumberGuesses();
-        obj.RockPaperScissor();
+        // obj.RockPaperScissor();
 
         // Vairable var = new Vairable();
         // var.stringMethods();
@@ -32,6 +33,14 @@ class Program
         // cnd.switchCase();
         // cnd.LogicalOperators();
         // cnd.Loops();
+        cnd.HandleException();
+
+        // ArrayExmp arr = new ArrayExmp();
+        // arr.ArrayExample();
+
+        MethodsUse mth = new MethodsUse();
+        // mth.methodUse(); 
+        // mth.Operation();
         
         Console.ReadKey();
     }

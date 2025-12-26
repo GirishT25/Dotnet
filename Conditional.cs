@@ -115,5 +115,36 @@ namespace MyNamespace
         }
 
         }
+
+        public void HandleException() // Exception handling
+        {
+            int x = 0;
+            int y = 0;
+            double result = 0;
+
+            Console.WriteLine("Enter the Number 1 :");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the Number 2 :");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            try
+            {
+                result = x / y;
+                Console.WriteLine("The result is  : " + result);
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine("Enter the numbers " + e);
+            }
+            catch(DivideByZeroException e)
+            {
+                Console.WriteLine("Do not Enter the element Zero : "+ e);
+            }
+            finally
+            {
+                Console.WriteLine("Thanks for visiting !!");
+            }
+        }
     }
 }
