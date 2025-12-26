@@ -33,14 +33,19 @@ class Program
         // cnd.switchCase();
         // cnd.LogicalOperators();
         // cnd.Loops();
-        cnd.HandleException();
+        // cnd.HandleException();
 
-        // ArrayExmp arr = new ArrayExmp();
+        ArrayExmp arr = new ArrayExmp();
         // arr.ArrayExample();
 
         MethodsUse mth = new MethodsUse();
         // mth.methodUse(); 
         // mth.Operation();
+
+        String name = "Girish";
+        ClassUse.sayHello(name);
+        ClassUse.DoingGood();
+        ClassUse.Fine(name);
         
         Console.ReadKey();
     }

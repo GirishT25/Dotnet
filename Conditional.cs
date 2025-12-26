@@ -19,6 +19,12 @@ namespace MyNamespace
                Console.WriteLine("You did not enter the name !!");
             }
 
+            int temp = 20 ;
+            String message = (temp >= 15 ) ? "It is warm outside" :  "It is cold outside"; // it is ternary operator 
+            Console.WriteLine(message); 
+
+            Console.WriteLine($"Hello {name} there is tempreature is about {temp} so the weather is like {message}");
+
         }
 
         public void switchCase()
